@@ -14,4 +14,6 @@ CREATE TABLE user (
 INSERT INTO user (username, brawlpass_xp, coins, level) VALUES
 ('CoolGuy124', 33, 168, 45),
 ('L0neWolf', 0, 0, 0),
-('MightyWitch51', 522, 3101, 99);
+('MightyWitch51', 522, 3101, 99),
+('GrayMane', 132, 235, 23),
+('Brawler5315', 21, 5, 3);

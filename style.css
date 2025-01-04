@@ -5,7 +5,7 @@ table {
 }
 table, th, td {
     border: 1px solid #ddd;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 th, td {
     padding: 8px;
@@ -28,19 +28,41 @@ h1{
     display: flex;
     justify-content: space-around;
     margin: auto;
-    width: 50%;
-    padding: 5rem;
+    width: 80%;
+    padding: 3rem;
+}
+
+.image-preview img{
+    max-height: 10rem;
 }
 
 .content{
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
+
+@media screen and (min-width: 1400px) {
+    .image-preview img {
+        max-height: 20rem;
+    }
+    table, th, td {
+        font-size: 3rem;
+    }
+    .image-preview{
+        width: 50%;
+        padding: 5rem;
+    }
+    .content{
+        width: 50%;
+    }
+}
+
+
 
 .nav-item{
     height: 5rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     font-style: normal;
     color: black;
     width: 15rem;
