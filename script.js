@@ -35,6 +35,7 @@ function buildOverviewTable(data){
         const tr = document.createElement('tr');
     
         tr.innerHTML = `
+            <td>${row.id}</td>
             <td>${row.username}</td>
             <td>${row.xp}</td>
             <td>${row.coins}</td>

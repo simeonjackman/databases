@@ -2,12 +2,13 @@
 -- Drop the existing table if it exists
 DROP TABLE IF EXISTS user;
 
--- Create a new table with the updated structure
+-- Create a new table with a primary key user_id
 CREATE TABLE user (
-    username TEXT PRIMARY KEY,
-    brawlpass_xp INTEGER,
-    coins INTEGER,
-    level INTEGER
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL,
+    brawlpass_xp INTEGER DEFAULT 0,
+    coins INTEGER DEFAULT 0,
+    level INTEGER DEFAULT 0
 );
 
 -- Insert new data
