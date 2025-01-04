@@ -19,7 +19,7 @@ const db = new sqlite3.Database('./datenbank.db', (err) => {
 
 // Endpoint to get data
 app.get('/api/data', (req, res) => {
-    const query = 'SELECT * FROM benutzer';
+    const query = 'SELECT username, brawlpass_xp AS xp, coins, level FROM benutzer';
     db.all(query, [], (err, rows) => {
         if (err) {
             console.error('Error fetching data:', err.message);
