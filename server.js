@@ -43,6 +43,19 @@ app.get('/api/rich', (req, res) => {
     });
 });
 
+// Endpoint to get players with most xp
+app.get('/api/xp', (req, res) => {
+    const query = 'SELECT username, brawlpass_xp AS xp FROM user';
+    db.all(query, [], (err, rows) => {
+        if (err) {
+            console.error('Error fetching data:', err.message);
+            res.status(500).json({ error: 'Failed to retrieve data' });
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

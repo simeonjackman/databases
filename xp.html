@@ -10,11 +10,11 @@
     <script src="script.js"></script>
     <title>SQLite Datenanzeige</title>
 </head>
-<body onload="fetchData()">
+<body onload="fetchXPData()">
     <div id="nav">
-        <a class="nav-item" id="selected" href="/index.html">Overview</a>
+        <a class="nav-item" href="/index.html">Overview</a>
         <a class="nav-item" href="/rich.html">Richest Players</a>
-        <a class="nav-item" href="/xp.html">Highest Levels</a>
+        <a class="nav-item" id="selected" href="/xp.html">Highest Levels</a>
     </div>
     <h1>Data Overview</h1>
     <div class="image-preview">
@@ -28,8 +28,6 @@
             <tr>
                 <th>Username</th>
                 <th>Brawlpass XP</th>
-                <th>Coins</th>
-                <th>Level</th>
             </tr>
         </thead>
         <tbody>
