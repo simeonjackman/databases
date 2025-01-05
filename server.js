@@ -56,6 +56,25 @@ app.get('/api/xp', (req, res) => {
     });
 });
 
+// Endpoint to create a new user
+app.post('/api/users', express.json(), (req, res) => {
+    const { username, brawlpass_xp, coins, level } = req.body;
+
+    if (!username) {
+        return res.status(400).json({ error: 'Username is required' });
+    }
+
+    const query = `INSERT INTO user (username, brawlpass_xp, coins, level) VALUES (?, ?, ?, ?)`;
+    db.run(query, [username, brawlpass_xp || 0, coins || 0, level || 0], function (err) {
+        if (err) {
+            console.error('Error creating user:', err.message);
+            res.status(500).json({ error: 'Failed to create user' });
+        } else {
+            res.status(201).json({ user_id: this.lastID, message: 'User created successfully' });
+        }
+    });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
