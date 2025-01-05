@@ -11,7 +11,7 @@
     <script src="script.js"></script>
     <title>The Richest...</title>
 </head>
-<body onload="fetchRichData(); fetchXPData()">
+<body onload="fetchRichData(); fetchXPData(); fetchFightersData();">
     <div id="nav">
         <a class="nav-item" href="/index.html">Overview</a>
         <a class="nav-item" id="selected" href="/records.html">Records</a>
@@ -57,6 +57,19 @@
     <div class="image-preview">
         <img class="blurred" src="https://static1.squarespace.com/static/58af450eb3db2b0582612f1d/58af55d29a6bf733a4093aaa/65c8d2e2fb83e50a433c73e1/1707748282917/all-loading-screens-coming-in-this-update-v0-m7si1wq0yh5c1.jpeg?format=1500w">
     </div>
-    <h2>?</h2>
+    <div class="content">
+    <table id="fighters-data-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datenzeilen werden hier durch JavaScript generiert -->
+        </tbody>
+    </table>
+    </div>
+    <div class="banner content"></div>
 </body>
 </html>

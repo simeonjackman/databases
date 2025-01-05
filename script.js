@@ -1,4 +1,4 @@
-async function fetchData() {
+async function fetchUserData() {
     try {
         const response = await fetch('http://localhost:3000/api/user');
         const data = await response.json();
@@ -23,6 +23,26 @@ async function fetchXPData() {
         const response = await fetch('http://localhost:3000/api/xp');
         const data = await response.json();
         buildXPTable(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+async function fetchFightData() {
+    try {
+        const response = await fetch('http://localhost:3000/api/fights');
+        const data = await response.json();
+        buildFightTable(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+async function fetchFightersData() {
+    try {
+        const response = await fetch('http://localhost:3000/api/fighters');
+        const data = await response.json();
+        buildFightersTable(data);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -70,6 +90,38 @@ function buildXPTable(data){
             <td>${row.username}</td>
             <td>${row.xp}</td>
         `;
+        tableBody.appendChild(tr);
+    });
+}
+
+function buildFightTable(data){
+    const tableBody = document.querySelector('#fight-data-table tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+    
+        tr.innerHTML = `
+            <td>${row.fight_id}</td>
+            <td>${row.player1}</td>
+            <td>${row.player1_score}</td>
+            <td>${row.player2}</td>
+            <td>${row.player2_score}</td>
+            <td>${row.winner}</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+}
+
+function buildFightersTable(data){
+    const tableBody = document.querySelector('#fighters-data-table tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+    
+        tr.innerHTML = `
+            <td>${row.username}</td>
+        `;
+    
         tableBody.appendChild(tr);
     });
 }

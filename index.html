@@ -11,7 +11,7 @@
     <script src="script.js"></script>
     <title>Data Overview</title>
 </head>
-<body onload="fetchData()">
+<body onload="fetchUserData(); fetchFightData()">
     <div id="nav">
         <a class="nav-item" id="selected" href="/index.html">Overview</a>
         <a class="nav-item" href="/records.html">Records</a>
@@ -41,6 +41,26 @@
     </table>
     </div>
     <h2>Fights</h2>
-    <h2>?</h2>
+    <div class="image-preview">
+        <img class="blurred" src="https://play-lh.googleusercontent.com/Zo7fkufmlGvQYr3elTKWPE5cNTlLUVuCc094muUNg-L4BZ5OUyWzGP_zQAQecZfdk_RHydi0bg=w7680-h4320-rw">
+    </div>
+    <div class="content">
+    <table id="fight-data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Player 1</th>
+                <th>Score</th>
+                <th>Player 2</th>
+                <th>Score</th>
+                <th>Winner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datenzeilen werden hier durch JavaScript generiert -->
+        </tbody>
+    </table>
+    </div>
+    <div class="banner content"></div>
 </body>
 </html>
