@@ -47,7 +47,7 @@ function buildOverviewTable(data){
 }
 
 function buildRichTable(data){
-    const tableBody = document.querySelector('#data-table tbody');
+    const tableBody = document.querySelector('#rich-data-table tbody');
     tableBody.innerHTML = ''; // Clear existing rows
     data.forEach(row => {
         const tr = document.createElement('tr');
@@ -61,7 +61,7 @@ function buildRichTable(data){
 }
 
 function buildXPTable(data){
-    const tableBody = document.querySelector('#data-table tbody');
+    const tableBody = document.querySelector('#xp-data-table tbody');
     tableBody.innerHTML = ''; // Clear existing rows
     data.forEach(row => {
         const tr = document.createElement('tr');

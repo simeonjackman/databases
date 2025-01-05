@@ -11,19 +11,19 @@
     <script src="script.js"></script>
     <title>The Richest...</title>
 </head>
-<body onload="fetchRichData()">
+<body onload="fetchRichData(); fetchXPData()">
     <div id="nav">
         <a class="nav-item" href="/index.html">Overview</a>
-        <a class="nav-item" id="selected" href="/rich.html">Richest Players</a>
-        <a class="nav-item" href="/xp.html">Highest Levels</a>
+        <a class="nav-item" id="selected" href="/records.html">Records</a>
         <a class="nav-item" href="/admin.html">Admin Page</a>
     </div>
-    <h1>The Richest Players</h1>
+    <h1>Records</h1>
+    <h2>The Richest...</h2>
     <div class="image-preview">
         <img class="blurred" src="https://playerassist.com/wp-content/uploads/2021/09/asd.png">
     </div>
     <div class="content">
-    <table id="data-table">
+    <table id="rich-data-table">
         <thead>
             <tr>
                 <th>Username</th>
@@ -35,5 +35,28 @@
         </tbody>
     </table>
     </div>
+    
+    <h2>The Most Experienced...</h2>
+    <div class="image-preview">
+        <img class="blurred" src="https://store.supercell.com/images/items/bs_bpp_perk4_2.png">
+    </div>
+    <div class="content">
+    <table id="xp-data-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Brawlpass XP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datenzeilen werden hier durch JavaScript generiert -->
+        </tbody>
+    </table>
+    </div>
+    <h2>The Best Fighters...</h2>
+    <div class="image-preview">
+        <img class="blurred" src="https://static1.squarespace.com/static/58af450eb3db2b0582612f1d/58af55d29a6bf733a4093aaa/65c8d2e2fb83e50a433c73e1/1707748282917/all-loading-screens-coming-in-this-update-v0-m7si1wq0yh5c1.jpeg?format=1500w">
+    </div>
+    <h2>?</h2>
 </body>
 </html>
