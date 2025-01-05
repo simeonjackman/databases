@@ -1,6 +1,6 @@
 async function fetchData() {
     try {
-        const response = await fetch('http://localhost:3000/api/data');
+        const response = await fetch('http://localhost:3000/api/user');
         const data = await response.json();
         buildOverviewTable(data);
     } catch (error) {
