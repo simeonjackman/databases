@@ -21,7 +21,7 @@ body{
 
 h1{
     text-align: center;
-    font-size: 10rem;
+    font-size: 7rem;
 }
 
 .image-preview{
@@ -39,7 +39,95 @@ h1{
 .content{
     width: 80%;
     margin: auto;
+    text-align: center;
 }
+
+.nav-item{
+    text-decoration: none;
+    font-size: 2rem;
+    font-style: normal;
+    color: black;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: green;
+}
+
+.nav-item:hover{
+    background-color: black;
+    color: white;
+    transition:
+        background-color 1s,
+}
+
+#nav{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#selected {
+    background-color: black;
+    color: white;
+  }
+
+#user-form{
+    margin: auto;
+    display: block;
+    align-items: center;
+    font-size: 2rem;
+    max-width: 50rem;
+}
+
+#user-form input{
+    margin: 1rem;
+    font-size: 3rem;
+    font-family: "Lilita One", serif;
+    background-color: white;
+    color: gray;
+    text-align: right;
+}
+
+#user-form input[type=number]{
+    margin: 1rem;
+    width: 4rem;
+}
+
+#user-form input[type=text]{
+    margin: 1rem;
+    width: 16rem;
+}
+
+#user-form button{
+    background-color: green;
+    color: white;
+    font-family: "Lilita One", serif;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+#user-form button:hover{
+    background-color: black;
+    color: white;
+    font-family: "Lilita One", serif;
+    font-size: 3rem;
+    padding: 1rem;
+    transform: rotate(5deg);
+    transition:
+        background-color 1s,
+        transform .5s;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid green;
+    padding: 1rem;
+    margin: 1rem;
+}
+
 
 @media screen and (min-width: 1400px) {
     .image-preview img {
@@ -55,37 +143,10 @@ h1{
     .content{
         width: 50%;
     }
+    .nav-item{
+        font-size: 3rem;
+    }
+    h1{
+        font-size: 10rem;
+    }
 }
-
-
-
-.nav-item{
-    height: 5rem;
-    text-decoration: none;
-    font-size: 3rem;
-    font-style: normal;
-    color: black;
-    width: 15rem;
-    padding: 2rem;
-    background-color: green;
-    transition:
-        width 2s,
-        height 2s,
-        background-color 1s,
-        rotate 2s;
-}
-
-a:hover, a:active {
-    background-color: black;
-    color: white;
-  }
-
-#nav{
-    margin: auto;
-    padding: 1rem;
-}
-
-#selected {
-    background-color: black;
-    color: white;
-  }
