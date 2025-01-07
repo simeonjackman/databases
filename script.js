@@ -103,9 +103,7 @@ function buildFightTable(data){
         tr.innerHTML = `
             <td>${row.fight_id}</td>
             <td>${row.player1}</td>
-            <td>${row.player1_score}</td>
             <td>${row.player2}</td>
-            <td>${row.player2_score}</td>
             <td>${row.winner}</td>
         `;
         tableBody.appendChild(tr);
