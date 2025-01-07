@@ -102,7 +102,7 @@ a:hover{
     transform: rotate(5deg);
   }
 
-#user-form{
+.cool-form{
     margin: auto;
     display: block;
     align-items: center;
@@ -110,7 +110,7 @@ a:hover{
     max-width: 50rem;
 }
 
-#user-form input{
+.cool-form input{
     margin: 1rem;
     font-size: 3rem;
     font-family: "Lilita One", serif;
@@ -119,17 +119,26 @@ a:hover{
     text-align: right;
 }
 
-#user-form input[type=number]{
+.cool-form input[type=number]{
     margin: 1rem;
     width: 6rem;
 }
 
-#user-form input[type=text]{
+.cool-form input[type=text]{
     margin: 1rem;
     width: 20rem;
 }
 
-#user-form button{
+.cool-form select{
+    margin: 1rem;
+    font-size: 3rem;
+    font-family: "Lilita One", serif;
+    background-color: white;
+    color: gray;
+    text-align: right;
+}
+
+.cool-form button{
     background-color: green;
     color: white;
     font-family: "Lilita One", serif;
@@ -137,7 +146,7 @@ a:hover{
     padding: 1rem;
 }
 
-#user-form button:hover{
+.cool-form button:hover{
     background-color: black;
     color: white;
     font-family: "Lilita One", serif;

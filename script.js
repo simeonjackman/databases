@@ -143,7 +143,6 @@ function buildFightersTable(data){
 
 async function createUser(event) {
     event.preventDefault();
-    console.log("triggered")
     const username = document.querySelector('#username').value;
     const brawlpass_xp = document.querySelector('#brawlpass_xp').value || 0;
     const coins = document.querySelector('#coins').value || 0;
@@ -165,5 +164,83 @@ async function createUser(event) {
         }
     } catch (error) {
         console.error('Error creating user:', error);
+    }
+}
+
+// Populate dropdowns with users
+async function loadUsers() {
+    try {
+        const response = await fetch('http://localhost:3000/api/user');
+        const users = await response.json();
+        console.log(users);
+
+        const player1Dropdown = document.getElementById('player1');
+        const player2Dropdown = document.getElementById('player2');
+        const winnerDropdown = document.getElementById('winner');
+
+        let first = true;
+
+        users.forEach((user) => {
+            if(first == true){
+                const option1 = new Option(user.username, user.id);
+                player1Dropdown.add(option1.cloneNode(true));
+                first = false;
+            } else{
+                const option1 = new Option(user.username, user.id);
+                player1Dropdown.add(option1.cloneNode(true));
+                const option2 = new Option(user.username, user.id);
+                player2Dropdown.add(option2.cloneNode(true));
+                
+            }
+            
+            
+            const option3 = new Option(user.username, user.id);
+            winnerDropdown.add(option3.cloneNode(true));
+        });
+
+        // Add "Draw" option for winner
+        const drawOption = new Option('Draw', '');
+        winnerDropdown.add(drawOption);
+    } catch (error) {
+        console.error('Error loading users:', error);
+    }
+}
+
+async function createFight(event){
+    event.preventDefault();
+
+    const player1_id = document.getElementById('player1').value;
+    const player2_id = document.getElementById('player2').value;
+    const winner_id = document.getElementById('winner').value || null;
+    const duration = document.getElementById('duration').value || null;
+    const player1_score = document.getElementById('player1_score').value || 0;
+    const player2_score = document.getElementById('player2_score').value || 0;
+
+    const fightData = {
+        player1_id,
+        player2_id,
+        winner_id,
+        duration,
+        player1_score,
+        player2_score,
+    };
+    try {
+        const response = await fetch('http://localhost:3000/api/fights', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(fightData),
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert('Fight added successfully!');
+            location.reload(); // Refresh the page to display updated data
+        } else {
+            alert(`Error: ${result.error}`);
+        }
+    } catch (error) {
+        console.error('Error adding fight:', error);
     }
 }

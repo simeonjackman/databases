@@ -11,7 +11,7 @@
         <script src="script.js"></script>
         <title>Admin Only...</title>
     </head>
-    <body>
+    <body onload="loadUsers()">
         <div id="nav">
             <a class="nav-item" href="/index.html">Overview</a>
             <a class="nav-item" href="/records.html">Records</a>
@@ -22,7 +22,8 @@
             <img src="https://admin.esports.gg/wp-content/uploads/2024/09/Brawl-Stars-Moe-poster-1568x882.jpg">
         </div>
         <div class="content">
-            <form autocomplete="off" id="user-form" onsubmit="createUser(event); return false">
+            <form autocomplete="off" id="user-form" class="cool-form" onsubmit="createUser(event); return false">
+                <h2>Add User</h2>
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
@@ -41,6 +42,41 @@
                 </div>
                 <button type="">Create User</button>
             </form>
+        </div>
+        <div class="content">
+            <form autocomplete="off" id="add-fight-form" class="cool-form" onsubmit="createFight(event); return false">
+                <h2>Add Fight</h2>
+                <div class="form-group">
+                    <label for="player1">Player 1:</label>
+                    <select id="player1" name="player1" required></select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="player2">Player 2:</label>
+                    <select id="player2" name="player2" required></select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="winner">Winner:</label>
+                    <select id="winner" name="winner"></select>
+                </div>
+                
+                  
+                
+                <div class="form-group">
+                    <label for="duration">Duration:</label>
+                    <input type="number" id="duration" name="duration" min="0" />
+                </div>
+                <div class="form-group">
+                    <label for="player1_score">Player 1 Score:</label>
+                    <input type="number" id="player1_score" name="player1_score" min="0" />
+                </div>
+                <div class="form-group">
+                    <label for="player2_score">Player 2 Score:</label>
+                    <input type="number" id="player2_score" name="player2_score" min="0" />
+                </div>
+                <button type="">Add Fight</button>
+              </form>
         </div>
         <div class="banner content"></div>
     </body>
