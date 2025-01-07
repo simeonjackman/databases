@@ -76,6 +76,9 @@ app.get('/api/fights', (req, res) => {
     const query = `
         SELECT 
             f.fight_id,
+            player1_id,
+            player2_id,
+            winner_id,
             u1.username AS player1,
             u2.username AS player2,
             u3.username AS winner,

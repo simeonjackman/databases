@@ -1,4 +1,4 @@
 -- SQLite
-SELECT coins
+SELECT username, coins
 FROM user
-WHERE username == "L0neWolf";
+ORDER BY coins DESC

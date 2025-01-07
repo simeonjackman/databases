@@ -33,6 +33,7 @@ async function fetchFightData() {
         const response = await fetch('http://localhost:3000/api/fights');
         const data = await response.json();
         buildFightTable(data);
+        buildFightTable2(data);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -105,6 +106,22 @@ function buildFightTable(data){
             <td>${row.player1}</td>
             <td>${row.player2}</td>
             <td>${row.winner}</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+}
+
+function buildFightTable2(data){
+    const tableBody = document.querySelector('#fight-data-table2 tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+    
+        tr.innerHTML = `
+            <td>${row.fight_id}</td>
+            <td>${row.player1_id}</td>
+            <td>${row.player2_id}</td>
+            <td>${row.winner_id}</td>
         `;
         tableBody.appendChild(tr);
     });
