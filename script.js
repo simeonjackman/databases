@@ -32,7 +32,8 @@ async function fetchFightData() {
     try {
         const response = await fetch('http://localhost:3000/api/fights');
         const data = await response.json();
-        buildFightTable(data);
+        buildFightTable0(data);
+        buildFightTable1(data);
         buildFightTable2(data);
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -95,8 +96,22 @@ function buildXPTable(data){
     });
 }
 
-function buildFightTable(data){
-    const tableBody = document.querySelector('#fight-data-table tbody');
+function buildFightTable0(data){
+    const tableBody = document.querySelector('#fight-data-table0 tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+    
+        tr.innerHTML = `
+            <td>${row.fight_id}</td>
+            <td>${row.player1} vs. ${row.player2} - ${row.winner} won</td>
+        `;
+        tableBody.appendChild(tr);
+    });
+}
+
+function buildFightTable1(data){
+    const tableBody = document.querySelector('#fight-data-table1 tbody');
     tableBody.innerHTML = ''; // Clear existing rows
     data.forEach(row => {
         const tr = document.createElement('tr');
