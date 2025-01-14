@@ -59,6 +59,11 @@ h3{
     max-height: 10rem;
 }
 
+.heading-logo{
+    max-height: 5rem;
+    border-radius: 50%;
+}
+
 .blurred:hover{
     transform:
         rotate(5deg) scale(1.1);
