@@ -6,11 +6,11 @@ VALUES
 (3, 36, 10000);
 
 -- SpielerIn-Daten
-INSERT INTO SpielerIn (LizenzNr, Name, Jahrgang, Groesse, Position, VertragNr)
+INSERT INTO SpielerIn (LizenzNr, Name, Jahrgang, Groesse, Position, VertragNr, TeamID)
 VALUES 
-(101, 'Max Mustermann', 2001, 180, 'Stürmer', 1),
-(102, 'Lisa Musterfrau', 1999, 170, 'Mittelfeld', 2),
-(103, 'John Doe', 2010, 185, 'Verteidiger', 3);
+(101, 'Max Mustermann', 1998, 180, 'Stürmer', 1, 1), -- gehört zu Team Blau
+(102, 'Lisa Musterfrau', 2001, 170, 'Mittelfeld', 2, 2), -- gehört zu Team Rot
+(103, 'John Doe', 1995, 185, 'Verteidiger', 3, 3); -- gehört zu Team Grün
 
 -- Team-Daten
 INSERT INTO Team (ID, Name, Trikotfarbe)
@@ -25,13 +25,6 @@ VALUES
 (201, 'Liga A', 'Team Blau', 'Team Rot', '2025-01-01 15:00'),
 (202, 'Liga B', 'Team Grün', 'Team Blau', '2025-01-05 18:00'),
 (203, 'Liga A', 'Team Rot', 'Team Grün', '2025-01-10 20:00');
-
--- SpielerIn_Team-Daten
-INSERT INTO SpielerIn_Team (LizenzNr, TeamID)
-VALUES 
-(101, 1), -- Max Mustermann spielt in Team Blau
-(102, 2), -- Lisa Musterfrau spielt in Team Rot
-(103, 3); -- John Doe spielt in Team Grün
 
 -- SpielerIn_Spiel-Daten
 INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr)
