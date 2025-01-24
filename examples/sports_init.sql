@@ -1,13 +1,6 @@
 CREATE DATABASE SportDB;
 USE SportDB;
 
--- Tabelle für Vertrag
-CREATE TABLE Vertrag (
-    VertragNr INT PRIMARY KEY,
-    Dauer INT,
-    Lohn INT
-);
-
 -- Tabelle für SpielerIn
 CREATE TABLE SpielerIn (
     LizenzNr INT PRIMARY KEY,
@@ -19,6 +12,13 @@ CREATE TABLE SpielerIn (
     TeamID INT, -- Fremdschlüssel für 1-zu-N Beziehung
     FOREIGN KEY (VertragNr) REFERENCES Vertrag(VertragNr),
     FOREIGN KEY (TeamID) REFERENCES Team(ID)
+);
+
+-- Tabelle für Vertrag
+CREATE TABLE Vertrag (
+    VertragNr INT PRIMARY KEY,
+    Dauer INT,
+    Lohn INT
 );
 
 -- Tabelle für Team
@@ -41,6 +41,7 @@ CREATE TABLE Spiel (
 CREATE TABLE SpielerIn_Spiel (
     LizenzNr INT,
     SpielNr INT,
+    Spielzeit INT, -- Neue Spalte für die Zeit, die ein Spieler in einem Spiel verbracht hat (in Minuten)
     PRIMARY KEY (LizenzNr, SpielNr),
     FOREIGN KEY (LizenzNr) REFERENCES SpielerIn(LizenzNr),
     FOREIGN KEY (SpielNr) REFERENCES Spiel(SpielNr)

@@ -27,8 +27,10 @@ VALUES
 (203, 'Liga A', 'Team Rot', 'Team Grün', '2025-01-10 20:00');
 
 -- SpielerIn_Spiel-Daten
-INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr)
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
 VALUES 
-(101, 201), -- Max Mustermann spielte in Spiel 201
-(102, 203), -- Lisa Musterfrau spielte in Spiel 203
-(103, 202); -- John Doe spielte in Spiel 202
+(101, 201, 90), -- Max Mustermann spielte 90 Minuten in Spiel 201
+(101, 202, 20), -- Max Mustermann spielte 20 Minuten in Spiel 202
+(102, 203, 75), -- Lisa Musterfrau spielte 75 Minuten in Spiel 203
+(102, 201, 75), -- Lisa Musterfrau spielte 75 Minuten in Spiel 201
+(103, 202, 60); -- John Doe spielte 60 Minuten in Spiel 202
