@@ -12,7 +12,7 @@ CREATE TABLE Vertrag (
 CREATE TABLE SpielerIn (
     LizenzNr INT PRIMARY KEY,
     Name TEXT,
-    Alter INT,
+    Jahrgang INT,
     Groesse INT,
     Position TEXT,
     VertragNr INT,
