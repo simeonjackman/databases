@@ -1,8 +1,9 @@
-CREATE DATABASE SportDB;
-USE SportDB;
+-- Commeted out first two lines, because the database already exists
+-- CREATE DATABASE SportDB;
+-- USE SportDB;
 
 -- Tabelle für SpielerIn
-CREATE TABLE SpielerIn (
+CREATE TABLE IF NOT EXISTS SpielerIn (
     LizenzNr INT PRIMARY KEY,
     Name TEXT,
     Jahrgang INT,
@@ -14,22 +15,28 @@ CREATE TABLE SpielerIn (
     FOREIGN KEY (TeamID) REFERENCES Team(ID)
 );
 
+DELETE FROM SpielerIn;
+
 -- Tabelle für Vertrag
-CREATE TABLE Vertrag (
+CREATE TABLE IF NOT EXISTS Vertrag (
     VertragNr INT PRIMARY KEY,
     Dauer INT,
     Lohn INT
 );
 
+DELETE FROM Vertrag;
+
 -- Tabelle für Team
-CREATE TABLE Team (
+CREATE TABLE IF NOT EXISTS Team (
     ID INT PRIMARY KEY,
     Name TEXT,
     Trikotfarbe TEXT
 );
 
+DELETE FROM Team;
+
 -- Tabelle für Spiel
-CREATE TABLE Spiel (
+CREATE TABLE IF NOT EXISTS Spiel (
     SpielNr INT PRIMARY KEY,
     Veranstalter TEXT,
     Gewinner TEXT,
@@ -37,8 +44,10 @@ CREATE TABLE Spiel (
     Spielzeit TEXT
 );
 
+DELETE FROM Spiel;
+
 -- Verknüpfung SpielerIn zu Spiel
-CREATE TABLE SpielerIn_Spiel (
+CREATE TABLE IF NOT EXISTS SpielerIn_Spiel (
     LizenzNr INT,
     SpielNr INT,
     Spielzeit INT, -- Neue Spalte für die Zeit, die ein Spieler in einem Spiel verbracht hat (in Minuten)
@@ -46,3 +55,5 @@ CREATE TABLE SpielerIn_Spiel (
     FOREIGN KEY (LizenzNr) REFERENCES SpielerIn(LizenzNr),
     FOREIGN KEY (SpielNr) REFERENCES Spiel(SpielNr)
 );
+
+DELETE FROM SpielerIn_Spiel;
