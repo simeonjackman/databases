@@ -1,36 +1,137 @@
--- Vertrag-Daten
-INSERT INTO Vertrag (VertragNr, Dauer, Lohn)
+INSERT INTO Vertrag (Dauer, Lohn)
 VALUES 
-(1, 12, 5000),
-(2, 24, 7000),
-(3, 36, 10000);
+(12, 4000),
+(24, 4500),
+(36, 5000),
+(18, 4200),
+(30, 4700),
+(48, 5200),
+(12, 4100),
+(24, 4600),
+(36, 5100),
+(18, 4300),
+(30, 4800),
+(48, 5300),
+(12, 4000),
+(24, 4400),
+(36, 4900),
+(18, 4500),
+(30, 5000),
+(48, 5400),
+(12, 4100),
+(24, 4600),
+(36, 5100),
+(18, 4300),
+(30, 4700),
+(48, 5200);
 
--- SpielerIn-Daten
-INSERT INTO SpielerIn (LizenzNr, Name, Jahrgang, Groesse, Position, VertragNr, TeamID)
+INSERT INTO Team (Name, Trikotfarbe)
 VALUES 
-(101, 'Max Mustermann', 1998, 180, 'Stürmer', 1, 1), -- gehört zu Team Blau
-(102, 'Lisa Musterfrau', 2001, 170, 'Mittelfeld', 2, 2), -- gehört zu Team Rot
-(103, 'John Doe', 1995, 185, 'Verteidiger', 3, 3); -- gehört zu Team Grün
+('LC Bruehl Handball', 'Gruen'),
+('Spono Eagles', 'Weiss'),
+('Yellow Winterthur', 'Gelb');
 
--- Team-Daten
-INSERT INTO Team (ID, Name, Trikotfarbe)
+INSERT INTO SpielerIn (Name, Jahrgang, Groesse, Position, VertragNr, TeamID)
 VALUES 
-(1, 'Team Blau', 'Blau'),
-(2, 'Team Rot', 'Rot'),
-(3, 'Team Grün', 'Grün');
+-- LC Bruehl Handball
+('Anna Meier', 1999, 172, 'Torhueterin', 1, 1),
+('Lena Mueller', 2001, 175, 'Rechtsaussen', 2, 1),
+('Sophie Steiner', 1998, 178, 'Linksaussen', 3, 1),
+('Clara Keller', 1997, 180, 'Rueckraum Mitte', 4, 1),
+('Nina Weber', 2000, 165, 'Rueckraum Links', 5, 1),
+('Sarah Frei', 1996, 176, 'Rueckraum Rechts', 6, 1),
+('Laura Schmid', 2002, 182, 'Kreislaeuferin', 7, 1),
+('Julia Vogel', 2003, 168, 'Torhueterin', 8, 1),
 
--- Spiel-Daten
-INSERT INTO Spiel (SpielNr, Veranstalter, Gewinner, Gegner, Spielzeit)
+-- Spono Eagles
+('Lisa Wagner', 2000, 170, 'Torhueterin', 9, 2),
+('Mia Hoffmann', 1998, 176, 'Rechtsaussen', 10, 2),
+('Lea Fischer', 1999, 180, 'Linksaussen', 11, 2),
+('Marie Steiner', 2001, 172, 'Rueckraum Mitte', 12, 2),
+('Emily Keller', 1996, 165, 'Rueckraum Links', 13, 2),
+('Hannah Frei', 2003, 182, 'Rueckraum Rechts', 14, 2),
+('Emma Vogel', 1997, 168, 'Kreislaeuferin', 15, 2),
+('Sophia Meier', 2002, 177, 'Torhueterin', 16, 2),
+
+-- Yellow Winterthur
+('Clara Mueller', 1999, 175, 'Torhueterin', 17, 3),
+('Lina Fischer', 1998, 178, 'Rechtsaussen', 18, 3),
+('Laura Steiner', 2000, 180, 'Linksaussen', 19, 3),
+('Maya Weber', 1996, 165, 'Rueckraum Mitte', 20, 3),
+('Sophia Keller', 2003, 182, 'Rueckraum Links', 21, 3),
+('Anna Frei', 1997, 176, 'Rueckraum Rechts', 22, 3),
+('Ella Vogel', 2001, 168, 'Kreislaeuferin', 23, 3),
+('Nina Wagner', 2002, 170, 'Torhueterin', 24, 3);
+
+INSERT INTO Spiel (Veranstalter, Gewinner, Gegner, Spielzeit)
 VALUES 
-(201, 'Liga A', 'Team Blau', 'Team Rot', '2025-01-01 15:00'),
-(202, 'Liga B', 'Team Grün', 'Team Blau', '2025-01-05 18:00'),
-(203, 'Liga A', 'Team Rot', 'Team Grün', '2025-01-10 20:00');
+('Spono Eagles', 'LC Bruehl Handball', 'Yellow Winterthur', '2025-02-01 14:30:00'),
+('LC Bruehl Handball', 'Spono Eagles', 'Yellow Winterthur', '2025-02-03 16:00:00'),
+('Yellow Winterthur', 'Yellow Winterthur', 'LC Bruehl Handball', '2025-02-07 18:30:00');
 
--- SpielerIn_Spiel-Daten
+
+-- Spiel 1
+
 INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
 VALUES 
-(101, 201, 90), -- Max Mustermann spielte 90 Minuten in Spiel 201
-(101, 202, 20), -- Max Mustermann spielte 20 Minuten in Spiel 202
-(102, 203, 75), -- Lisa Musterfrau spielte 75 Minuten in Spiel 203
-(102, 201, 75), -- Lisa Musterfrau spielte 75 Minuten in Spiel 201
-(103, 202, 60); -- John Doe spielte 60 Minuten in Spiel 202
+-- Spono Eagles
+(9, 1, 60),
+(10, 1, 55),
+(11, 1, 50),
+(12, 1, 45),
+(13, 1, 40),
+(14, 1, 35),
+(15, 1, 30),
+
+-- LC Bruehl Handball
+(1, 1, 60),
+(2, 1, 55),
+(3, 1, 50),
+(4, 1, 45),
+(5, 1, 40),
+(6, 1, 35),
+(7, 1, 30);
+
+-- Spiel 2
+
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
+VALUES 
+-- LC Bruehl Handball
+(1, 2, 60),
+(2, 2, 55),
+(3, 2, 50),
+(4, 2, 45),
+(5, 2, 40),
+(6, 2, 35),
+(7, 2, 30),
+
+-- Yellow Winterthur
+(17, 2, 60),
+(18, 2, 55),
+(19, 2, 50),
+(20, 2, 45),
+(21, 2, 40),
+(22, 2, 35),
+(23, 2, 30);
+
+-- Spiel 3
+
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
+VALUES 
+-- Yellow Winterthur
+(17, 3, 60),
+(18, 3, 55),
+(19, 3, 50),
+(20, 3, 45),
+(21, 3, 40),
+(22, 3, 35),
+(23, 3, 30),
+
+-- Spono Eagles
+(9, 3, 60),
+(10, 3, 55),
+(11, 3, 50),
+(12, 3, 45),
+(13, 3, 40),
+(14, 3, 35),
+(15, 3, 30);
