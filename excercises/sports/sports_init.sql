@@ -37,7 +37,7 @@ DELETE FROM Team;
 
 -- Tabelle für Spiel
 CREATE TABLE IF NOT EXISTS Spiel (
-    SpielNr INTEGER INTEGER PRIMARY KEY AUTOINCREMENT,
+    SpielNr INTEGER PRIMARY KEY AUTOINCREMENT,
     Veranstalter TEXT,
     Gewinner TEXT,
     Gegner TEXT,
