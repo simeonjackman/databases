@@ -21,9 +21,11 @@ WHERE VertragNr = (SELECT VertragNr FROM SpielerIn WHERE Name = 'Anna Meier');
 
 4.
 ```
-SELECT SpielNr, Gegner, Spielzeit 
+SELECT SpielNr, Spielzeit 
 FROM Spiel 
-WHERE Veranstalter = 'Spono Eagles';
+WHERE HeimteamID = (SELECT ID FROM Team WHERE Name = 'Yellow Winterthur')
+OR
+AuswärtsteamID = (SELECT ID FROM Team WHERE Name = 'Yellow Winterthur');
 ```
 
 ### Teil 2: Filtern und Sortieren

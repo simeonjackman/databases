@@ -63,11 +63,14 @@ VALUES
 ('Ella Vogel', 2001, 168, 'Kreislaeuferin', 23, 3),
 ('Nina Wagner', 2002, 170, 'Torhueterin', 24, 3);
 
-INSERT INTO Spiel (Veranstalter, Gewinner, Gegner, Spielzeit)
+INSERT INTO Spiel (HeimteamID, AuswärtsteamID, Spielzeit, GewinnerID) 
 VALUES 
-('Spono Eagles', 'LC Bruehl Handball', 'Yellow Winterthur', '2025-02-01 14:30:00'),
-('LC Bruehl Handball', 'Spono Eagles', 'Yellow Winterthur', '2025-02-03 16:00:00'),
-('Yellow Winterthur', 'Yellow Winterthur', 'LC Bruehl Handball', '2025-02-07 18:30:00');
+-- LC Bruehl Handball vs. Spono Eagles
+(1, 2, '2023-10-01 18:30:00', 1),
+-- Spono Eagles vs. Yellow Winterthur
+(2, 3, '2023-11-05 16:00:00', 3),
+-- Yellow Winterthur vs. LC Bruehl Handball
+(3, 1, '2023-12-15 19:00:00', 1);
 
 
 -- Spiel 1

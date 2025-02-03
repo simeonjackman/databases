@@ -12,7 +12,7 @@ Das Ziel dieses Aufgabenblatts ist es zu lernen, komplexere Datenbanken zu verst
 1. Alle Spielerinnen anzeigen: Schreiben Sie eine SQL-Abfrage, die alle Spielerinnen mit ihrem Namen, Jahrgang und ihrer Position ausgibt.
 2. Spielerinnenliste eines bestimmten Teams: Zeigen Sie die Namen aller Spielerinnen des Teams "LC Bruehl Handball" an.
 3. Vertragsdetails finden: Finden Sie die Vertragsdauer (Dauer) und den Lohn (Lohn) für die Spielerin mit dem Namen "Anna Meier".
-4. Spiele eines Veranstalters anzeigen: Listen Sie alle Spiele der "Spono Eagles". Zeigen Sie dabei die SpielNr, den Gegner und den Spielzeitpunkt an.
+4. Spiele eines Teams anzeigen: Listen Sie alle Spiele der "Spono Eagles". Zeigen Sie dabei die SpielNr und den Spielzeitpunkt an.
 
 ### Teil 2: Filtern und Sortieren
 5. Älteste Spielerin eines Teams: Schreiben Sie eine Abfrage, die den Namen der ältesten Spielerin des Teams "Yellow Winterthur" ausgibt.

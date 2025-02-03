@@ -2,6 +2,8 @@
 -- CREATE DATABASE SportDB;
 -- USE SportDB;
 
+-- Vorhandene Tabelle löschen, wenn sie existiert
+DROP TABLE IF EXISTS SpielerIn;
 -- Tabelle für SpielerIn
 CREATE TABLE IF NOT EXISTS SpielerIn (
     LizenzNr INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -15,8 +17,8 @@ CREATE TABLE IF NOT EXISTS SpielerIn (
     FOREIGN KEY (TeamID) REFERENCES Team(ID)
 );
 
-DELETE FROM SpielerIn;
-
+-- Vorhandene Tabelle löschen, wenn sie existiert
+DROP TABLE IF EXISTS Vertrag;
 -- Tabelle für Vertrag
 CREATE TABLE IF NOT EXISTS Vertrag (
     VertragNr INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,8 +26,9 @@ CREATE TABLE IF NOT EXISTS Vertrag (
     Lohn INTEGER
 );
 
-DELETE FROM Vertrag;
 
+-- Vorhandene Tabelle löschen, wenn sie existiert
+DROP TABLE IF EXISTS Team;
 -- Tabelle für Team
 CREATE TABLE IF NOT EXISTS Team (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -33,19 +36,22 @@ CREATE TABLE IF NOT EXISTS Team (
     Trikotfarbe TEXT
 );
 
-DELETE FROM Team;
-
+-- Vorhandene Tabelle löschen, wenn sie existiert
+DROP TABLE IF EXISTS Spiel;
 -- Tabelle für Spiel
-CREATE TABLE IF NOT EXISTS Spiel (
+CREATE TABLE Spiel (
     SpielNr INTEGER PRIMARY KEY AUTOINCREMENT,
-    Veranstalter TEXT,
-    Gewinner TEXT,
-    Gegner TEXT,
-    Spielzeit TEXT
+    HeimteamID INTEGER NOT NULL,
+    AuswärtsteamID INTEGER NOT NULL,
+    Spielzeit DATETIME NOT NULL,
+    GewinnerID INTEGER,
+    FOREIGN KEY (HeimteamID) REFERENCES Team(ID),
+    FOREIGN KEY (AuswärtsteamID) REFERENCES Team(ID),
+    FOREIGN KEY (GewinnerID) REFERENCES Team(ID)
 );
 
-DELETE FROM Spiel;
-
+-- Vorhandene Tabelle löschen, wenn sie existiert
+DROP TABLE IF EXISTS SpielerIn_Spiel;
 -- Verknüpfung SpielerIn zu Spiel
 CREATE TABLE IF NOT EXISTS SpielerIn_Spiel (
     LizenzNr INTEGER,
@@ -55,5 +61,3 @@ CREATE TABLE IF NOT EXISTS SpielerIn_Spiel (
     FOREIGN KEY (LizenzNr) REFERENCES SpielerIn(LizenzNr),
     FOREIGN KEY (SpielNr) REFERENCES Spiel(SpielNr)
 );
-
-DELETE FROM SpielerIn_Spiel;
