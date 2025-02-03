@@ -61,7 +61,10 @@ VALUES
 ('Sophia Keller', 2003, 182, 'Rueckraum Links', 21, 3),
 ('Anna Frei', 1997, 176, 'Rueckraum Rechts', 22, 3),
 ('Ella Vogel', 2001, 168, 'Kreislaeuferin', 23, 3),
-('Nina Wagner', 2002, 170, 'Torhueterin', 24, 3);
+('Nina Wagner', 2002, 170, 'Torhueterin', 24, 3),
+
+-- Ohne Team
+('Lina Roullier', 2001, 171, 'Linksaussen', NULL, NULL);
 
 INSERT INTO Spiel (HeimteamID, AuswärtsteamID, Spielzeit, GewinnerID) 
 VALUES 
