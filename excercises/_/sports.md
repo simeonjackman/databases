@@ -72,13 +72,23 @@ WHERE SpielNr = 2 AND LizenzNr IN (
 
 9.
 ```
+SELECT Team.Name AS Teamname, SUM(SpielerIn_Spiel.Spielzeit) AS GesamteSpielzeit
+FROM SpielerIn_Spiel
+JOIN SpielerIn ON SpielerIn_Spiel.LizenzNr = SpielerIn.LizenzNr
+JOIN Team ON SpielerIn.TeamID = Team.ID
+WHERE SpielerIn_Spiel.SpielNr = 2 AND Team.Name = 'LC Bruehl Handball'
+GROUP BY Team.Name;
+```
+
+10.
+```
 SELECT SpielerIn.Name, Team.Name AS Teamname, Vertrag.Dauer, Vertrag.Lohn 
 FROM SpielerIn
 JOIN Vertrag ON SpielerIn.VertragNr = Vertrag.VertragNr
 JOIN Team ON SpielerIn.TeamID = Team.ID;
 ```
 
-10.
+11.
 ```
 SELECT SpielerIn.Name, Team.Name AS Teamname, SpielerIn_Spiel.Spielzeit 
 FROM SpielerIn_Spiel

@@ -23,8 +23,9 @@ Das Ziel dieses Aufgabenblatts ist es zu lernen, komplexere Datenbanken zu verst
 8. Gesamte Spielzeit eines Teams in einem Spiel: Schreiben Sie eine Abfrage, die die gesamte Spielzeit der Spielerinnen des Teams "LC Bruehl Handball" in Spiel SpielNr = 2 berechnet.
 
 ### Teil 4: Joins
-9. Spielerinnenliste mit Vertragsdetails: Schreiben Sie eine Abfrage, die alle Spielerinnen mit ihrem Namen, ihrem Team und den Vertragsdetails (Dauer, Lohn) kombiniert.
-10. Spielstatistik für ein Spiel: Erstellen Sie eine Abfrage, die für das Spiel SpielNr = 3 folgende Informationen ausgibt:
+9. Lösen Sie Aufgabe 8 mit einem Join.
+10. Spielerinnenliste mit Vertragsdetails: Schreiben Sie eine Abfrage, die alle Spielerinnen mit ihrem Namen, ihrem Team und den Vertragsdetails (Dauer, Lohn) kombiniert.
+11. Spielstatistik für ein Spiel: Erstellen Sie eine Abfrage, die für das Spiel SpielNr = 3 folgende Informationen ausgibt:
 
 * Name der Spielerinnen im Spiel
 * Teamname
