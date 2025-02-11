@@ -58,3 +58,11 @@ JOIN SpielerIn ON SpielerIn_Spiel.LizenzNr = SpielerIn.LizenzNr
 JOIN Team ON SpielerIn.TeamID = Team.ID
 WHERE SpielerIn_Spiel.SpielNr = 3
 ORDER BY Team.Name;
+-- 12
+SELECT Name, SUM(SpielerIn_Spiel.Spielzeit) as Spielzeit_Total, Vertrag.Lohn, Vertrag.Lohn / SUM(SpielerIn_Spiel.Spielzeit) as Lohn_Pro_Spielminute
+FROM SpielerIn
+JOIN Vertrag ON SpielerIn.VertragNr = Vertrag.VertragNr
+JOIN SpielerIn_Spiel ON SpielerIn.LizenzNr = SpielerIn_Spiel.LizenzNr
+GROUP BY SpielerIn.Name
+ORDER BY Lohn_Pro_Spielminute DESC
+LIMIT 1;

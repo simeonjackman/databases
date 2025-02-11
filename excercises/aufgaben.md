@@ -31,3 +31,5 @@ Das Ziel dieses Aufgabenblatts ist es zu lernen, komplexere Datenbanken zu verst
 * Teamname
 * Spielzeit
 * Sortieren Sie die Ergebnisse nach dem Teamnamen
+
+12. Welche Spielerin verdient pro gespielte Spielminute am meisten?
