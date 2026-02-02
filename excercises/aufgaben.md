@@ -19,11 +19,11 @@ Das Ziel dieses Aufgabenblatts ist es zu lernen, komplexere Datenbanken zu verst
 6. Spielzeit sortiert anzeigen: Listen Sie alle Spielerinnen aus dem Spiel mit der SpielNr = 1, sortiert nach der Spielzeit in absteigender Reihenfolge.
 
 ### Teil 3: Aggregatfunktionen
-7. Durchschnittsgrösse der Spielerinnen eines Teams: Finden Sie die durchschnittliche Grösse der Spielerinnen des Teams "Spono Eagles". Runden Sie das Ergebnis auf 2 Nachkommastellen.
+7. Durchschnittsgrösse der Spielerinnen eines Teams: Finden Sie die durchschnittliche Grösse der Spielerinnen des Teams "Spono Eagles". Runden Sie das Ergebnis auf 2 Nachkommastellen. (Siehe [W3school - avg](https://www.w3schools.com/sql/sql_avg.asp))
 8. Gesamte Spielzeit eines Teams in einem Spiel: Schreiben Sie eine Abfrage, die die gesamte Spielzeit der Spielerinnen des Teams "LC Bruehl Handball" in Spiel SpielNr = 2 berechnet.
 
 ### Teil 4: Joins
-9. Lösen Sie Aufgabe 8 mit einem Join.
+9. Lösen Sie Aufgabe 8 mit einem Join. (Siehe [W3school - join](https://www.w3schools.com/sql/sql_join.asp))
 10. Spielerinnenliste mit Vertragsdetails: Schreiben Sie eine Abfrage, die alle Spielerinnen mit ihrem Namen, ihrem Team und den Vertragsdetails (Dauer, Lohn) kombiniert.
 11. Spielstatistik für ein Spiel: Erstellen Sie eine Abfrage, die für das Spiel SpielNr = 3 folgende Informationen ausgibt:
 
