@@ -69,75 +69,75 @@ VALUES
 INSERT INTO Spiel (HeimteamID, AuswärtsteamID, Spielzeit, GewinnerID) 
 VALUES 
 -- LC Bruehl Handball vs. Spono Eagles
-(1, 2, '2023-10-01 18:30:00', 1),
+(2, 1, '2023-10-01 18:30:00', 1),
 -- Spono Eagles vs. Yellow Winterthur
-(2, 3, '2023-11-05 16:00:00', 3),
+(1, 3, '2023-11-05 16:00:00', 1),
 -- Yellow Winterthur vs. LC Bruehl Handball
-(3, 1, '2023-12-15 19:00:00', 1);
+(3, 2, '2023-12-15 19:00:00', 2);
 
 
 -- Spiel 1
 
-INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit, Tore)
 VALUES 
 -- Spono Eagles
-(9, 1, 60),
-(10, 1, 55),
-(11, 1, 50),
-(12, 1, 45),
-(13, 1, 40),
-(14, 1, 35),
-(15, 1, 30),
+(9, 1, 60, 0),
+(10, 1, 55, 3),
+(11, 1, 50, 8),
+(12, 1, 45, 2),
+(13, 1, 40, 4),
+(14, 1, 35, 2),
+(15, 1, 30, 7),
 
 -- LC Bruehl Handball
-(1, 1, 60),
-(2, 1, 55),
-(3, 1, 50),
-(4, 1, 45),
-(5, 1, 40),
-(6, 1, 35),
-(7, 1, 30);
+(1, 1, 60, 1),
+(2, 1, 55, 2),
+(3, 1, 50, 2),
+(4, 1, 45, 1),
+(5, 1, 40, 12),
+(6, 1, 35, 3),
+(7, 1, 30, 4);
 
 -- Spiel 2
 
-INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit, Tore)
 VALUES 
 -- LC Bruehl Handball
-(1, 2, 60),
-(2, 2, 55),
-(3, 2, 50),
-(4, 2, 45),
-(5, 2, 40),
-(6, 2, 35),
-(7, 2, 30),
+(1, 2, 60, 0),
+(2, 2, 55, 3),
+(3, 2, 50, 6),
+(4, 2, 45, 4),
+(5, 2, 40, 8),
+(6, 2, 35, 2),
+(7, 2, 30, 9),
 
 -- Yellow Winterthur
-(17, 2, 60),
-(18, 2, 55),
-(19, 2, 50),
-(20, 2, 45),
-(21, 2, 40),
-(22, 2, 35),
-(23, 2, 30);
+(17, 2, 60, 0),
+(18, 2, 55, 2),
+(19, 2, 50, 3),
+(20, 2, 45, 10),
+(21, 2, 40, 11),
+(22, 2, 35, 0),
+(23, 2, 30, 1);
 
 -- Spiel 3
 
-INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit)
+INSERT INTO SpielerIn_Spiel (LizenzNr, SpielNr, Spielzeit, Tore)
 VALUES 
 -- Yellow Winterthur
-(17, 3, 60),
-(18, 3, 55),
-(19, 3, 50),
-(20, 3, 45),
-(21, 3, 40),
-(22, 3, 35),
-(23, 3, 30),
+(17, 3, 60, 0),
+(18, 3, 55, 5),
+(19, 3, 50, 2),
+(20, 3, 45, 6),
+(21, 3, 40, 9),
+(22, 3, 35, 3),
+(23, 3, 30, 1),
 
 -- Spono Eagles
-(9, 3, 60),
-(10, 3, 55),
-(11, 3, 50),
-(12, 3, 45),
-(13, 3, 40),
-(14, 3, 35),
-(15, 3, 30);
+(9, 3, 60, 0),
+(10, 3, 55, 4),
+(11, 3, 50, 5),
+(12, 3, 45, 3),
+(13, 3, 40, 7),
+(14, 3, 35, 9),
+(15, 3, 30, 1);

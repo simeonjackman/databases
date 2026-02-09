@@ -56,7 +56,8 @@ DROP TABLE IF EXISTS SpielerIn_Spiel;
 CREATE TABLE IF NOT EXISTS SpielerIn_Spiel (
     LizenzNr INTEGER,
     SpielNr INTEGER,
-    Spielzeit INTEGER, -- Neue Spalte für die Zeit, die ein Spieler in einem Spiel verbracht hat (in Minuten)
+    Spielzeit INTEGER, -- Neue Spalte für die Zeit, die eine Spielerin in einem Spiel verbracht hat (in Minuten)
+    Tore INTEGER,
     PRIMARY KEY (LizenzNr, SpielNr),
     FOREIGN KEY (LizenzNr) REFERENCES SpielerIn(LizenzNr),
     FOREIGN KEY (SpielNr) REFERENCES Spiel(SpielNr)
