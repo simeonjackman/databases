@@ -33,3 +33,4 @@ Das Ziel dieses Aufgabenblatts ist es zu lernen, komplexere Datenbanken zu verst
 * Sortieren Sie die Ergebnisse nach dem Teamnamen
 
 12. Welche Spielerin verdient pro gespielte Spielminute am meisten?
+13. Wer ist Topscorer der Liga?

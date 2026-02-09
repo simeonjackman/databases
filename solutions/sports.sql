@@ -66,3 +66,8 @@ JOIN SpielerIn_Spiel ON SpielerIn.LizenzNr = SpielerIn_Spiel.LizenzNr
 GROUP BY SpielerIn.Name
 ORDER BY Lohn_Pro_Spielminute DESC
 LIMIT 1;
+-- 13
+SELECT SpielerIn.Name, SUM(SpielerIn_Spiel.Tore) from SpielerIn
+JOIN SpielerIn_Spiel ON SpielerIn.LizenzNr = SpielerIn_Spiel.LizenzNr
+GROUP BY SpielerIn.LizenzNr
+ORDER BY SUM(SpielerIn_Spiel.Tore) DESC
