@@ -3,7 +3,6 @@
 ## Einführung
 * Stellen Sie sicher, dass Sie die SQLite Extension installiert haben: Drücken Sie `Ctrl/Cmd + Shift + P` und geben Sie `Install Extensions` ein. Geben Sie dann `alexcvzz.vscode-sqlite` ein und installieren Sie die Extension.
 * Drücken Sie `Ctrl/Cmd + Shift + P` und geben Sie `Open Database` ein, wählen Sie dann `sports.db`aus. Die Datenbank sollte dann im Exporer unten links angezeigt werden.
-* Drücken Sie `Ctrl/Cmd + Shift + P` und geben Sie `Use Database` ein, wählen Sie dann `sports.db`aus. 
 * Um eine Datenbankabfrage auszuführen, drücken Sie `Ctrl/Cmd + Shift + P` und geben Sie `SQLite: New Query` ein
 
 ## Datenbank aufsetzen
